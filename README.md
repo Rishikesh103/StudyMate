@@ -2,38 +2,51 @@
 
 > A comprehensive MERN stack application designed to help students track their learning progress, generate AI-powered insights, and optimize their study habits.
 
-![Login Page](./screenshots/login.png)
+<div align="center">
+
+![StudyMate Login](./screenshots/01-login.png)
+*Clean, modern authentication interface with social login options*
+
+</div>
+
+---
 
 ## 🌟 Features
 
-### 🎯 Core Functionality
-- **Study Session Tracking** - Log study sessions with subject, topic, duration, mood, and cognitive load
-- **Progress Analytics** - GitHub-style heatmap showing daily study activity over 365 days
-- **AI-Powered Insights** - Personalized study recommendations using local LLaMA 3.2 via Ollama
-- **Smart Quiz Generation** - All generated quizzes with difficulty levels and performance tracking
-- **Roadmap Management** - Create and track learning roadmaps for subjects and topics
-- **Spaced Repetition System** - SM-2 algorithm-based revision planning for optimal retention
-- **RAG Chat System** - Chat with your study data using semantic search and vector embeddings
+### 📊 Intelligent Dashboard
+Track your study progress at a glance with personalized insights, daily goals, and smart recommendations powered by AI.
 
-### 👥 Multi-Role Support
-- **Students** - Track studies, take quizzes, view analytics, chat with AI tutor
-- **Teachers** - Create assignments, monitor student progress, provide feedback
-- **Parents** - View child's study statistics and progress
-- **Admins** - Full system management and analytics dashboard
+![Dashboard](./screenshots/02-dashboard.png)
 
-### 🔐 Authentication & Security
-- **JWT-based authentication** with bcrypt password hashing
-- **Role-based access control** (RBAC)
-- **Social login** integration (Google, Microsoft)
-- **Secure session management**
+### 📝 Study Session Logging
+Record every study session with detailed metadata including subject, topic, duration, mood, and cognitive load for comprehensive analytics.
 
-### 🎨 Modern UI/UX
-- **Dark-themed interface** with glassmorphism effects
-- **Responsive design** for all devices
-- **Real-time updates** via Socket.IO
-- **Interactive data visualizations**
+![Study Log](./screenshots/03-study-log.png)
 
-![Signup Page](./screenshots/signup.png)
+### 🗺️ Syllabus & Roadmap Tracking
+Organize your curriculum across subjects and units with visual progress tracking and completion percentages.
+
+![Syllabus Map](./screenshots/04-syllabus.png)
+
+### 🤖 AI-Powered Quiz Generator
+Generate custom quizzes on any topic using local LLaMA 3.2 AI. Choose difficulty levels and question types for personalized practice.
+
+![Quiz Generator](./screenshots/05-quiz-generator.png)
+
+### 🧠 Spaced Repetition System
+Smart revision planner using the SM-2 algorithm to optimize memory retention with scientifically-timed review sessions.
+
+![Revision Planner](./screenshots/06-revision-planner.png)
+
+### 📈 Advanced Analytics
+GitHub-style contribution heatmap showing 365 days of study activity, weekly patterns, and subject distribution insights.
+
+![Analytics Dashboard](./screenshots/07-analytics.png)
+
+### 🎯 Learning Roadmaps
+Create and manage multiple study roadmaps with progress tracking across subjects and topics.
+
+![My Roadmaps](./screenshots/08-roadmaps.png)
 
 ---
 
@@ -193,6 +206,40 @@ StudyMate/
 
 ---
 
+## 🎮 Key Features Explained
+
+### 1. **Study Session Tracking**
+- Log study sessions with subject, topic, and duration
+- Track mood and cognitive load for each session
+- Add notes and set difficulty levels
+- Review session history with filtering options
+
+### 2. **AI-Powered Insights**
+- Get personalized study recommendations
+- Identify weak areas needing more attention
+- Receive optimal study time suggestions
+- AI-generated quiz questions based on your syllabus
+
+### 3. **Spaced Repetition System**
+- Uses the proven SM-2 algorithm
+- Automatically schedules review sessions
+- Tracks retention quality ratings
+- Prevents forgetting with scientific timing
+
+### 4. **Analytics & Progress Tracking**
+- 365-day GitHub-style heatmap
+- Subject-wise study distribution
+- Weekly and monthly trends
+- Streak tracking and achievements
+
+### 5. **Smart Roadmaps**
+- Create custom learning paths
+- Track progress across multiple subjects
+- Set deadlines and priorities
+- Monitor overall completion percentage
+
+---
+
 ## 🔧 Configuration
 
 ### MongoDB Connection
@@ -219,41 +266,6 @@ OLLAMA_MODEL=llama3.2
 USE_OLLAMA=false
 GROQ_API_KEY=your_api_key_here
 ```
-
----
-
-## 🎮 Usage
-
-### Creating an Account
-
-1. Navigate to the signup page
-2. Choose your role (Student/Parent)
-3. Enter your details
-4. Click "Create Account"
-
-![Admin Portal](./screenshots/admin.png)
-
-### Logging a Study Session
-
-1. Go to **Study Log** page
-2. Select subject and topic
-3. Enter duration and mood
-4. Add optional notes
-5. Click "Log Session"
-
-### View ing Analytics
-
-1. Navigate to **Analytics** Dashboard
-2. View your 365-day study heatmap
-3. Check subject distribution charts
-4. Monitor weekly/monthly progress
-
-### Taking a Quiz
-
-1. Go to **Quiz** page
-2. Select subject and difficulty
-3. Generate AI-powered questions
-4. Submit answers for instant scoring
 
 ---
 
@@ -329,6 +341,29 @@ And update `vite.config.ts` for frontend port.
 
 ---
 
+## 🌟 Core Functionality Highlights
+
+### Multi-Role Support
+- **Students** - Full access to study tracking, analytics, quizzes, and AI chat
+- **Teachers** - Create assignments and monitor student progress
+- **Parents** - View child's study statistics and provide feedback
+- **Admins** - System-wide analytics and user management
+
+### Real-Time Features (Socket.IO)
+- Live study session updates
+- Real-time notification system
+- Instant analytics refresh
+- Collaborative features support
+
+### Security
+- JWT-based authentication
+- Bcrypt password hashing
+- Role-based access control (RBAC)
+- Secure session management
+- Protected API routes
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -370,7 +405,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **API Endpoints:** 50+
 - **Database Models:** 11
 - **React Components:** 100+
+- **Active Features:** 15+
 
 ---
 
+<div align="center">
+
 **Built with ❤️ for students, by students.**
+
+[⬆ Back to Top](#-studymate---smart-study-platform)
+
+</div>

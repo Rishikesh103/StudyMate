@@ -1,0 +1,157 @@
+/* === MOOD BUTTON STYLING === */
+.mood-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-xl);
+    border: 2px solid transparent;
+    background: var(--bg-elevated);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    overflow: hidden;
+}
+
+.mood-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, transparent, transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.mood-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.mood-button:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Active state with animated border */
+.mood-button-active {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.mood-button-active::before {
+    opacity: 1;
+}
+
+/* Mood-specific gradients and colors */
+.mood-success {
+    background: linear-gradient(135deg, rgba(48, 209, 88, 0.1) 0%, rgba(48, 209, 88, 0.05) 100%);
+}
+
+.mood-success:hover {
+    background: linear-gradient(135deg, rgba(48, 209, 88, 0.2) 0%, rgba(48, 209, 88, 0.1) 100%);
+    box-shadow: 0 8px 24px rgba(48, 209, 88, 0.3);
+}
+
+.mood-success.mood-button-active {
+    background: linear-gradient(135deg, rgba(48, 209, 88, 0.25) 0%, rgba(48, 209, 88, 0.15) 100%);
+    border-color: var(--success);
+    box-shadow: 0 0 30px rgba(48, 209, 88, 0.4);
+}
+
+.mood-success::before {
+    background: linear-gradient(135deg, var(--success), #20C05C);
+}
+
+.mood-primary {
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.1) 0%, rgba(10, 132, 255, 0.05) 100%);
+}
+
+.mood-primary:hover {
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.2) 0%, rgba(10, 132, 255, 0.1) 100%);
+    box-shadow: 0 8px 24px rgba(10, 132, 255, 0.3);
+}
+
+.mood-primary.mood-button-active {
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.25) 0%, rgba(10, 132, 255, 0.15) 100%);
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(10, 132, 255, 0.4);
+}
+
+.mood-primary::before {
+    background: linear-gradient(135deg, var(--primary), #5E5CE6);
+}
+
+.mood-warning {
+    background: linear-gradient(135deg, rgba(255, 214, 10, 0.1) 0%, rgba(255, 214, 10, 0.05) 100%);
+}
+
+.mood-warning:hover {
+    background: linear-gradient(135deg, rgba(255, 214, 10, 0.2) 0%, rgba(255, 214, 10, 0.1) 100%);
+    box-shadow: 0 8px 24px rgba(255, 214, 10, 0.3);
+}
+
+.mood-warning.mood-button-active {
+    background: linear-gradient(135deg, rgba(255, 214, 10, 0.25) 0%, rgba(255, 214, 10, 0.15) 100%);
+    border-color: var(--warning);
+    box-shadow: 0 0 30px rgba(255, 214, 10, 0.4);
+}
+
+.mood-warning::before {
+    background: linear-gradient(135deg, var(--warning), #FFB000);
+}
+
+.mood-info {
+    background: linear-gradient(135deg, rgba(100, 210, 255, 0.1) 0%, rgba(100, 210, 255, 0.05) 100%);
+}
+
+.mood-info:hover {
+    background: linear-gradient(135deg, rgba(100, 210, 255, 0.2) 0%, rgba(100, 210, 255, 0.1) 100%);
+    box-shadow: 0 8px 24px rgba(100, 210, 255, 0.3);
+}
+
+.mood-info.mood-button-active {
+    background: linear-gradient(135deg, rgba(100, 210, 255, 0.25) 0%, rgba(100, 210, 255, 0.15) 100%);
+    border-color: var(--info);
+    box-shadow: 0 0 30px rgba(100, 210, 255, 0.4);
+}
+
+.mood-info::before {
+    background: linear-gradient(135deg, var(--info), #3DAEFF);
+}
+
+.mood-danger {
+    background: linear-gradient(135deg, rgba(255, 69, 58, 0.1) 0%, rgba(255, 69, 58, 0.05) 100%);
+}
+
+.mood-danger:hover {
+    background: linear-gradient(135deg, rgba(255, 69, 58, 0.2) 0%, rgba(255, 69, 58, 0.1) 100%);
+    box-shadow: 0 8px 24px rgba(255, 69, 58, 0.3);
+}
+
+.mood-danger.mood-button-active {
+    background: linear-gradient(135deg, rgba(255, 69, 58, 0.25) 0%, rgba(255, 69, 58, 0.15) 100%);
+    border-color: var(--danger);
+    box-shadow: 0 0 30px rgba(255, 69, 58, 0.4);
+}
+
+.mood-danger::before {
+    background: linear-gradient(135deg, var(--danger), #FF2D55);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mood-button {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .mood-button span:first-child {
+        font-size: 3rem !important;
+    }
+}
